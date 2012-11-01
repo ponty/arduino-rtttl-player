@@ -1,0 +1,4 @@
+"player.play(0);","no song"
+"player.play_P(0);","no song"
+"player.play(""Indiana:d=4,o=5,b=4000:e,8p,8f,8g,8p,1c6"");","song in RAM"
+"player.play_P(PSTR(""Indiana:d=4,o=5,b=4000:e,8p,8f,8g,8p,1c6""));","song in PROGMEM"
