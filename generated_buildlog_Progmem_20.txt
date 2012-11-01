@@ -1,0 +1,67 @@
+----------
+stdout
+----------
+scons: Reading SConscript files ...
+No Arduino version specified. Discovered version 100 or above
+maximum size for hex file: 14336 bytes
+scons: done reading SConscript files.
+scons: Building targets ...
+scons: building associated VariantDir targets: build/local build
+fnProcessing(["build/Progmem.cpp"], ["build/Progmem.ino"])
+/tmp/pyavrutils_Z4vdm4/Progmem/Progmem.ino Progmem
+avr-g++ -o build/Progmem.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/Progmem.cpp
+avr-g++ -o build/core/CDC.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/CDC.cpp
+avr-g++ -o build/core/HID.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/HID.cpp
+avr-g++ -o build/core/HardwareSerial.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/HardwareSerial.cpp
+avr-g++ -o build/core/IPAddress.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/IPAddress.cpp
+avr-g++ -o build/core/Print.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/Print.cpp
+avr-g++ -o build/core/Stream.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/Stream.cpp
+avr-g++ -o build/core/Tone.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/Tone.cpp
+avr-g++ -o build/core/USBCore.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/USBCore.cpp
+avr-gcc -o build/core/WInterrupts.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/WInterrupts.c
+avr-g++ -o build/core/WMath.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/WMath.cpp
+avr-g++ -o build/core/WString.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/WString.cpp
+avr-g++ -o build/core/new.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/new.cpp
+avr-gcc -o build/core/wiring.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/wiring.c
+avr-gcc -o build/core/wiring_analog.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/wiring_analog.c
+avr-gcc -o build/core/wiring_digital.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/wiring_digital.c
+avr-gcc -o build/core/wiring_pulse.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/wiring_pulse.c
+avr-gcc -o build/core/wiring_shift.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega1280 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/wiring_shift.c
+fnCompressCore(["build/core.a"], ["build/core/wiring_shift.o", "build/core/wiring_pulse.o", "build/core/wiring.o", "build/core/wiring_digital.o", "build/core/wiring_analog.o", "build/core/WInterrupts.o", "build/core/WString.o", "build/core/Tone.o", "build/core/new.o", "build/core/USBCore.o", "build/core/WMath.o", "build/core/HID.o", "build/core/CDC.o", "build/core/Print.o", "build/core/HardwareSerial.o", "build/core/IPAddress.o", "build/core/Stream.o"])
+avr-ar rcs build/core.a build/core/wiring_shift.o
+avr-ar rcs build/core.a build/core/wiring_pulse.o
+avr-ar rcs build/core.a build/core/wiring.o
+avr-ar rcs build/core.a build/core/wiring_digital.o
+avr-ar rcs build/core.a build/core/wiring_analog.o
+avr-ar rcs build/core.a build/core/WInterrupts.o
+avr-ar rcs build/core.a build/core/WString.o
+avr-ar rcs build/core.a build/core/Tone.o
+avr-ar rcs build/core.a build/core/new.o
+avr-ar rcs build/core.a build/core/USBCore.o
+avr-ar rcs build/core.a build/core/WMath.o
+avr-ar rcs build/core.a build/core/HID.o
+avr-ar rcs build/core.a build/core/CDC.o
+avr-ar rcs build/core.a build/core/Print.o
+avr-ar rcs build/core.a build/core/HardwareSerial.o
+avr-ar rcs build/core.a build/core/IPAddress.o
+avr-ar rcs build/core.a build/core/Stream.o
+avr-gcc -mmcu=atmega1280 -Os -Wl,--gc-sections -o Progmem.elf build/Progmem.o build/core.a -lm
+avr-objcopy -O ihex -R .eeprom Progmem.elf Progmem.hex
+avr-size --target=ihex Progmem.hex
+   text	   data	    bss	    dec	    hex	filename
+      0	   4718	      0	   4718	   126e	Progmem.hex
+scons: done building targets.
+
+----------
+stderr
+----------
+In file included from build/Progmem.ino:2:0:
+build/lib_00/rtttl/rtttl.h:31:29: warning: only initialized variables can be placed into program memory area
+build/Progmem.ino:9:21: warning: only initialized variables can be placed into program memory area
+In file included from build/core/IPAddress.cpp:3:0:
+build/core/IPAddress.h: In member function 'IPAddress::operator uint32_t()':
+build/core/IPAddress.h:51:55: warning: dereferencing type-punned pointer will break strict-aliasing rules
+build/core/IPAddress.h: In member function 'bool IPAddress::operator==(const IPAddress&)':
+build/core/IPAddress.h:52:75: warning: dereferencing type-punned pointer will break strict-aliasing rules
+build/core/IPAddress.h:52:108: warning: dereferencing type-punned pointer will break strict-aliasing rules
+build/core/Tone.cpp:93:45: warning: only initialized variables can be placed into program memory area

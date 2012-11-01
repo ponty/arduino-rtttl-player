@@ -1,0 +1,85 @@
+----------
+stdout
+----------
+scons: Reading SConscript files ...
+No Arduino version specified. Discovered version 0023 or below
+maximum size for hex file: 14336 bytes
+scons: done reading SConscript files.
+scons: Building targets ...
+scons: building associated VariantDir targets: build/local build
+fnProcessing(["build/Ram.cpp"], ["build/Ram.pde"])
+/tmp/pyavrutils_zwd42m/Ram/Ram.pde Ram
+avr-g++ -o build/Ram.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/rtttl build/Ram.cpp
+avr-g++ -o build/core/HardwareSerial.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/rtttl build/core/HardwareSerial.cpp
+avr-g++ -o build/core/Print.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/rtttl build/core/Print.cpp
+avr-g++ -o build/core/Tone.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/rtttl build/core/Tone.cpp
+avr-gcc -o build/core/WInterrupts.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/rtttl build/core/WInterrupts.c
+avr-g++ -o build/core/WMath.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/rtttl build/core/WMath.cpp
+avr-g++ -o build/core/WString.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/rtttl build/core/WString.cpp
+avr-gcc -o build/core/pins_arduino.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/rtttl build/core/pins_arduino.c
+avr-gcc -o build/core/wiring.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/rtttl build/core/wiring.c
+avr-gcc -o build/core/wiring_analog.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/rtttl build/core/wiring_analog.c
+avr-gcc -o build/core/wiring_digital.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/rtttl build/core/wiring_digital.c
+avr-gcc -o build/core/wiring_pulse.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/rtttl build/core/wiring_pulse.c
+avr-gcc -o build/core/wiring_shift.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega328p -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/rtttl build/core/wiring_shift.c
+fnCompressCore(["build/core.a"], ["build/core/wiring_shift.o", "build/core/wiring_pulse.o", "build/core/pins_arduino.o", "build/core/wiring.o", "build/core/wiring_digital.o", "build/core/wiring_analog.o", "build/core/WInterrupts.o", "build/core/WString.o", "build/core/Tone.o", "build/core/WMath.o", "build/core/Print.o", "build/core/HardwareSerial.o"])
+avr-ar rcs build/core.a build/core/wiring_shift.o
+avr-ar rcs build/core.a build/core/wiring_pulse.o
+avr-ar rcs build/core.a build/core/pins_arduino.o
+avr-ar rcs build/core.a build/core/wiring.o
+avr-ar rcs build/core.a build/core/wiring_digital.o
+avr-ar rcs build/core.a build/core/wiring_analog.o
+avr-ar rcs build/core.a build/core/WInterrupts.o
+avr-ar rcs build/core.a build/core/WString.o
+avr-ar rcs build/core.a build/core/Tone.o
+avr-ar rcs build/core.a build/core/WMath.o
+avr-ar rcs build/core.a build/core/Print.o
+avr-ar rcs build/core.a build/core/HardwareSerial.o
+avr-gcc -mmcu=atmega328p -Os -Wl,--gc-sections -o Ram.elf build/Ram.o build/core.a -lm
+avr-objcopy -O ihex -R .eeprom Ram.elf Ram.hex
+avr-size --target=ihex Ram.hex
+   text	   data	    bss	    dec	    hex	filename
+      0	   3858	      0	   3858	    f12	Ram.hex
+scons: done building targets.
+
+----------
+stderr
+----------
+In file included from build/Ram.pde:2:0:
+build/lib_00/rtttl/rtttl.h:31:29: warning: only initialized variables can be placed into program memory area
+In file included from build/core/wiring_private.h:30:0,
+                 from build/core/HardwareSerial.cpp:28:
+/usr/lib/gcc/avr/4.5.3/../../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+build/core/Print.cpp: In member function 'void Print::print(const String&)':
+build/core/Print.cpp:48:32: warning: comparison between signed and unsigned integer expressions
+build/core/Tone.cpp:108:45: warning: only initialized variables can be placed into program memory area
+In file included from build/core/wiring_private.h:30:0,
+                 from build/core/WInterrupts.c:34:
+/usr/lib/gcc/avr/4.5.3/../../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from build/core/wiring_private.h:30:0,
+                 from build/core/pins_arduino.c:26:
+/usr/lib/gcc/avr/4.5.3/../../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+build/core/pins_arduino.c:361:2: warning: initialization makes integer from pointer without a cast
+build/core/pins_arduino.c:362:2: warning: initialization makes integer from pointer without a cast
+build/core/pins_arduino.c:363:2: warning: initialization makes integer from pointer without a cast
+build/core/pins_arduino.c:369:2: warning: initialization makes integer from pointer without a cast
+build/core/pins_arduino.c:370:2: warning: initialization makes integer from pointer without a cast
+build/core/pins_arduino.c:371:2: warning: initialization makes integer from pointer without a cast
+build/core/pins_arduino.c:377:2: warning: initialization makes integer from pointer without a cast
+build/core/pins_arduino.c:378:2: warning: initialization makes integer from pointer without a cast
+build/core/pins_arduino.c:379:2: warning: initialization makes integer from pointer without a cast
+In file included from build/core/wiring_private.h:30:0,
+                 from build/core/wiring.c:25:
+/usr/lib/gcc/avr/4.5.3/../../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from build/core/wiring_private.h:30:0,
+                 from build/core/wiring_analog.c:27:
+/usr/lib/gcc/avr/4.5.3/../../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from build/core/wiring_private.h:30:0,
+                 from build/core/wiring_digital.c:27:
+/usr/lib/gcc/avr/4.5.3/../../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from build/core/wiring_private.h:30:0,
+                 from build/core/wiring_pulse.c:25:
+/usr/lib/gcc/avr/4.5.3/../../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from build/core/wiring_private.h:30:0,
+                 from build/core/wiring_shift.c:25:
+/usr/lib/gcc/avr/4.5.3/../../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."

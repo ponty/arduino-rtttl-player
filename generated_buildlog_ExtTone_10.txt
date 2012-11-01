@@ -1,0 +1,88 @@
+----------
+stdout
+----------
+scons: Reading SConscript files ...
+No Arduino version specified. Discovered version 0023 or below
+maximum size for hex file: 14336 bytes
+scons: done reading SConscript files.
+scons: Building targets ...
+scons: building associated VariantDir targets: build/local build
+fnProcessing(["build/ExtTone.cpp"], ["build/ExtTone.pde"])
+/tmp/pyavrutils_tHPbro/ExtTone/ExtTone.pde ExtTone
+avr-g++ -o build/ExtTone.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/Tone -Ibuild/lib_00/rtttl build/ExtTone.cpp
+avr-g++ -o build/core/HardwareSerial.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/Tone -Ibuild/lib_00/rtttl build/core/HardwareSerial.cpp
+avr-g++ -o build/core/Print.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/Tone -Ibuild/lib_00/rtttl build/core/Print.cpp
+avr-g++ -o build/core/Tone.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/Tone -Ibuild/lib_00/rtttl build/core/Tone.cpp
+avr-gcc -o build/core/WInterrupts.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/Tone -Ibuild/lib_00/rtttl build/core/WInterrupts.c
+avr-g++ -o build/core/WMath.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/Tone -Ibuild/lib_00/rtttl build/core/WMath.cpp
+avr-g++ -o build/core/WString.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/Tone -Ibuild/lib_00/rtttl build/core/WString.cpp
+avr-gcc -o build/core/pins_arduino.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/Tone -Ibuild/lib_00/rtttl build/core/pins_arduino.c
+avr-gcc -o build/core/wiring.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/Tone -Ibuild/lib_00/rtttl build/core/wiring.c
+avr-gcc -o build/core/wiring_analog.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/Tone -Ibuild/lib_00/rtttl build/core/wiring_analog.c
+avr-gcc -o build/core/wiring_digital.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/Tone -Ibuild/lib_00/rtttl build/core/wiring_digital.c
+avr-gcc -o build/core/wiring_pulse.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/Tone -Ibuild/lib_00/rtttl build/core/wiring_pulse.c
+avr-gcc -o build/core/wiring_shift.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -std=gnu99 -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/Tone -Ibuild/lib_00/rtttl build/core/wiring_shift.c
+fnCompressCore(["build/core.a"], ["build/core/wiring_shift.o", "build/core/wiring_pulse.o", "build/core/pins_arduino.o", "build/core/wiring.o", "build/core/wiring_digital.o", "build/core/wiring_analog.o", "build/core/WInterrupts.o", "build/core/WString.o", "build/core/Tone.o", "build/core/WMath.o", "build/core/Print.o", "build/core/HardwareSerial.o"])
+avr-ar rcs build/core.a build/core/wiring_shift.o
+avr-ar rcs build/core.a build/core/wiring_pulse.o
+avr-ar rcs build/core.a build/core/pins_arduino.o
+avr-ar rcs build/core.a build/core/wiring.o
+avr-ar rcs build/core.a build/core/wiring_digital.o
+avr-ar rcs build/core.a build/core/wiring_analog.o
+avr-ar rcs build/core.a build/core/WInterrupts.o
+avr-ar rcs build/core.a build/core/WString.o
+avr-ar rcs build/core.a build/core/Tone.o
+avr-ar rcs build/core.a build/core/WMath.o
+avr-ar rcs build/core.a build/core/Print.o
+avr-ar rcs build/core.a build/core/HardwareSerial.o
+avr-g++ -o build/lib_00/Tone/Tone.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega168 -DARDUINO=23 -DF_CPU=8000000L -Ibuild/core -Ibuild/lib_00/Tone -Ibuild/lib_00/rtttl build/lib_00/Tone/Tone.cpp
+avr-gcc -mmcu=atmega168 -Os -Wl,--gc-sections -o ExtTone.elf build/ExtTone.o build/lib_00/Tone/Tone.o build/core.a -lm
+avr-objcopy -O ihex -R .eeprom ExtTone.elf ExtTone.hex
+avr-size --target=ihex ExtTone.hex
+   text	   data	    bss	    dec	    hex	filename
+      0	   4266	      0	   4266	   10aa	ExtTone.hex
+scons: done building targets.
+
+----------
+stderr
+----------
+In file included from build/ExtTone.pde:2:0:
+build/lib_00/rtttl/rtttl.h:31:29: warning: only initialized variables can be placed into program memory area
+build/ExtTone.pde:7:21: warning: only initialized variables can be placed into program memory area
+In file included from build/core/wiring_private.h:30:0,
+                 from build/core/HardwareSerial.cpp:28:
+/usr/lib/gcc/avr/4.5.3/../../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+build/core/Print.cpp: In member function 'void Print::print(const String&)':
+build/core/Print.cpp:48:32: warning: comparison between signed and unsigned integer expressions
+build/core/Tone.cpp:108:45: warning: only initialized variables can be placed into program memory area
+In file included from build/core/wiring_private.h:30:0,
+                 from build/core/WInterrupts.c:34:
+/usr/lib/gcc/avr/4.5.3/../../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from build/core/wiring_private.h:30:0,
+                 from build/core/pins_arduino.c:26:
+/usr/lib/gcc/avr/4.5.3/../../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+build/core/pins_arduino.c:361:2: warning: initialization makes integer from pointer without a cast
+build/core/pins_arduino.c:362:2: warning: initialization makes integer from pointer without a cast
+build/core/pins_arduino.c:363:2: warning: initialization makes integer from pointer without a cast
+build/core/pins_arduino.c:369:2: warning: initialization makes integer from pointer without a cast
+build/core/pins_arduino.c:370:2: warning: initialization makes integer from pointer without a cast
+build/core/pins_arduino.c:371:2: warning: initialization makes integer from pointer without a cast
+build/core/pins_arduino.c:377:2: warning: initialization makes integer from pointer without a cast
+build/core/pins_arduino.c:378:2: warning: initialization makes integer from pointer without a cast
+build/core/pins_arduino.c:379:2: warning: initialization makes integer from pointer without a cast
+In file included from build/core/wiring_private.h:30:0,
+                 from build/core/wiring.c:25:
+/usr/lib/gcc/avr/4.5.3/../../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from build/core/wiring_private.h:30:0,
+                 from build/core/wiring_analog.c:27:
+/usr/lib/gcc/avr/4.5.3/../../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from build/core/wiring_private.h:30:0,
+                 from build/core/wiring_digital.c:27:
+/usr/lib/gcc/avr/4.5.3/../../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from build/core/wiring_private.h:30:0,
+                 from build/core/wiring_pulse.c:25:
+/usr/lib/gcc/avr/4.5.3/../../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from build/core/wiring_private.h:30:0,
+                 from build/core/wiring_shift.c:25:
+/usr/lib/gcc/avr/4.5.3/../../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+build/lib_00/Tone/Tone.cpp:91:45: warning: only initialized variables can be placed into program memory area

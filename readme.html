@@ -1,0 +1,211 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>About &mdash; arduino-rttl-player 0.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="arduino-rttl-player 0.0.0 documentation" href="index.html" />
+    <link rel="next" title="Examples" href="examples.html" />
+    <link rel="prev" title="Table of Contents" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="examples.html" title="Examples"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Table of Contents"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">arduino-rttl-player 0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="about">
+<h1>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="http://en.wikipedia.org/wiki/Ring_Tone_Transfer_Language">RTTTL</a> player library for <a class="reference external" href="http://arduino.cc/">Arduino</a>.</p>
+<dl class="docutils">
+<dt>Links:</dt>
+<dd><ul class="first last simple">
+<li>home: <a class="reference external" href="https://github.com/ponty/arduino-rtttl-player">https://github.com/ponty/arduino-rtttl-player</a></li>
+<li>documentation: <a class="reference external" href="http://ponty.github.com/arduino-rtttl-player">http://ponty.github.com/arduino-rtttl-player</a></li>
+</ul>
+</dd>
+<dt>Features:</dt>
+<dd><ul class="first last simple">
+<li>based on RTTTL example in <a class="reference external" href="http://code.google.com/p/rogue-code/wiki/ToneLibraryDocumentation">Tone</a> library</li>
+<li>blocking mode only</li>
+<li>song can be both in PROGMEM or RAM</li>
+<li>support for both internal and external improved <a class="reference external" href="http://code.google.com/p/rogue-code/wiki/ToneLibraryDocumentation">Tone</a> library</li>
+<li>build tests</li>
+<li>examples</li>
+<li>library size calculation</li>
+<li>simulation</li>
+<li>API documentation with doxygen</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="basic-usage">
+<h1>Basic usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-c"><pre>//#include &lt;Tone.h&gt;
+// if Tone.h is included before this include,
+// then the external Tone library is used
+// else the core tone()/noTone() functions.
+#include &lt;rtttl.h&gt;
+
+const int pinSpeaker = 13;
+const int octave = 0;
+const char song_P[] PROGMEM = 'Indiana:d=4,o=5,b=4000:e,8p,8f,8g,8p,1c6';
+
+Rtttl player;
+
+void setup(void)
+{
+        player.begin(pinSpeaker);
+        player.play_P(song_P, octave);
+}
+
+void loop(void)
+{
+}</pre>
+</div>
+</div>
+<div class="section" id="manual-installation">
+<h1>Manual Installation<a class="headerlink" href="#manual-installation" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="http://arduino.cc/en/Guide/Environment#libraries">http://arduino.cc/en/Guide/Environment#libraries</a></p>
+</div>
+<div class="section" id="automatic-installation">
+<h1>Automatic Installation<a class="headerlink" href="#automatic-installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul>
+<li><p class="first">install <a class="reference external" href="http://arduino.cc/">arduino</a></p>
+</li>
+<li><p class="first">install <a class="reference external" href="https://github.com/ponty/confduino">confduino</a></p>
+</li>
+<li><p class="first">install the library:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp"># as root</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">confduino</span><span class="p">.</span><span class="n">libinstall</span> <span class="n">https</span><span class="o">:</span><span class="c1">//github.com/ponty/arduino-rtttl-player/zipball/master</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="ubuntu">
+<h2>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-c"><div class="highlight"><pre><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">arduino</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">pip</span>
+<span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">confduino</span>
+<span class="n">sudo</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">confduino</span><span class="p">.</span><span class="n">libinstall</span> <span class="n">https</span><span class="o">:</span><span class="c1">//github.com/ponty/arduino-rtttl-player/zipball/master</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ubuntu-uninstall">
+<h2>Ubuntu uninstall<a class="headerlink" href="#ubuntu-uninstall" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-c"><div class="highlight"><pre><span class="n">sudo</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">confduino</span><span class="p">.</span><span class="n">libremove</span> <span class="n">rtttl</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">About</a></li>
+<li><a class="reference internal" href="#basic-usage">Basic usage</a></li>
+<li><a class="reference internal" href="#manual-installation">Manual Installation</a></li>
+<li><a class="reference internal" href="#automatic-installation">Automatic Installation</a><ul>
+<li><a class="reference internal" href="#general">General</a></li>
+<li><a class="reference internal" href="#ubuntu">Ubuntu</a></li>
+<li><a class="reference internal" href="#ubuntu-uninstall">Ubuntu uninstall</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Table of Contents</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="examples.html"
+                        title="next chapter">Examples</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/readme.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="examples.html" title="Examples"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Table of Contents"
+             >previous</a> |</li>
+        <li><a href="index.html">arduino-rttl-player 0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, ponty.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
