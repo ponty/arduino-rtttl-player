@@ -8,7 +8,7 @@ scons: done reading SConscript files.
 scons: Building targets ...
 scons: building associated VariantDir targets: build/local build
 fnProcessing(["build/Progmem.cpp"], ["build/Progmem.ino"])
-/tmp/pyavrutils_LIO3OG/Progmem/Progmem.ino Progmem
+/tmp/pyavrutils_ezAaOJ/Progmem/Progmem.ino Progmem
 avr-g++ -o build/Progmem.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega640 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/Progmem.cpp
 avr-g++ -o build/core/CDC.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega640 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/CDC.cpp
 avr-g++ -o build/core/HID.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega640 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/HID.cpp
