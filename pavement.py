@@ -123,7 +123,7 @@ def libsize():
 
 ARDUINO_VERSIONS = [
                   '0022',
-                  '0023',
+#                  '0023',
                   '1.0',
                   ]
 
