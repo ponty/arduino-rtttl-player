@@ -15,7 +15,9 @@ Features:
  - library size calculation
  - simulation
  - API documentation with doxygen
-   
+ - header only library
+ - supported Arduino versions: 0022, 1.0
+    
 Basic usage
 ============
 ::
