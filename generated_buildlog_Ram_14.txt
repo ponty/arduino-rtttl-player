@@ -8,7 +8,7 @@ scons: done reading SConscript files.
 scons: Building targets ...
 scons: building associated VariantDir targets: build/local build
 fnProcessing(["build/Ram.cpp"], ["build/Ram.ino"])
-/tmp/pyavrutils_pT2Ymy/Ram/Ram.ino Ram
+/tmp/pyavrutils_Pqt3Cr/Ram/Ram.ino Ram
 avr-g++ -o build/Ram.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega2560 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/Ram.cpp
 avr-g++ -o build/core/CDC.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega2560 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/CDC.cpp
 avr-g++ -o build/core/HID.o -c -ffunction-sections -fdata-sections -fno-exceptions -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Os -mmcu=atmega2560 -DARDUINO=100 -DF_CPU=8000000L -Ibuild/core -I/home/titi/opt/arduino-1.0/hardware/arduino/variants/standard -Ibuild/lib_00/rtttl build/core/HID.cpp
