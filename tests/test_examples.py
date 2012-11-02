@@ -2,13 +2,14 @@ from nose.tools import eq_, ok_
 from path import path
 from pyavrutils import support, arduino
 from pyavrutils.arduino import Arduino, ArduinoCompileError
+from pyavrutils.support import simple_targets
 import logging
 
 root = path(__file__).parent.parent
 examples = support.find_examples(root)
 
 fails = [
-#        ('PWM.pde', 'atmega8'),
+        ('ExtTone.pde', 'atmega48'),
        ]
 
 
@@ -17,13 +18,31 @@ def test_examples_count():
     ok_(len(examples))
 
 
-def check_build(ex, hwpack, board):
-    cc = Arduino(hwpack=hwpack, board=board)
+#def check_build(ex, hwpack, board):
+#    cc = Arduino(hwpack=hwpack, board=board)
+##    cc.extra_lib = root
+#    print cc.hwpack, cc.board, ex
+#    cc.build(ex)
+#    assert cc.size().ok
+
+def check_build(ex, mcu):
+    cc = Arduino(mcu=mcu)
 #    cc.extra_lib = root
-    print cc.hwpack, cc.board, ex
+    print cc.mcu, ex
     cc.build(ex)
     assert cc.size().ok
 
+#def generate(func, params, labels=None):
+#    if not labels:
+#        labels = params
+#    if not hasattr(func, '_index'):
+#        func._index = 0
+#    func._index += 1
+#    cmd = '''def test_{func._index:02}_{labels}(): {func.__name__}({params})'''.format(func=func,
+#                       params=','.join(['"%s"' % x for x in params]),
+#                       labels='_'.join(labels))
+#    logging.debug('cmd:' + cmd)
+#    return cmd
 
 def generate(func, params, labels=None):
     if not labels:
@@ -38,9 +57,17 @@ def generate(func, params, labels=None):
     return cmd
 
 for ex in examples:
-    for cc in arduino.targets():
-        if cc.hwpack == 'arduino':
-            if (str(path(ex).name), cc.mcu_compiler()) not in fails:
-                exec generate(check_build,
-                              [ex, cc.hwpack, cc.board],
-                              [ex.namebase, cc.hwpack, cc.board])
+    for cc in simple_targets():
+        if (str(path(ex).name), cc.mcu) not in fails:
+            exec generate(check_build,
+                      [ex, cc.mcu],
+                      [ex.namebase, cc.mcu])
+
+# for ex in examples:
+#    for cc in arduino.targets():
+#        if cc.hwpack == 'arduino':
+#            if (str(path(ex).name), cc.mcu_compiler()) not in fails:
+#                exec generate(check_build,
+#                              [ex, cc.hwpack, cc.board],
+#                              [ex.namebase, cc.hwpack, cc.board])
+
