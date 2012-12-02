@@ -6,7 +6,8 @@ Links:
  * documentation: http://ponty.github.com/arduino-rtttl-player
 
 Features:
- - based on RTTTL example in Tone_ library
+ - based on RTTTL example_ in Tone_ library
+ - hardware: check Tone_ library
  - blocking mode only
  - song can be either in PROGMEM or RAM
  - support for both internal and external improved Tone_ library
@@ -85,3 +86,4 @@ Ubuntu uninstall
 .. _RTTTL: http://en.wikipedia.org/wiki/Ring_Tone_Transfer_Language
 .. _confduino: https://github.com/ponty/confduino
 .. _Tone: http://code.google.com/p/rogue-code/wiki/ToneLibraryDocumentation
+.. _example: http://code.google.com/p/arduino-tone/source/browse/trunk/examples/RTTTL/RTTTL.pde

@@ -14,8 +14,6 @@ Rtttl player;
 void setup(void)
 {
 	player.begin(pinSpeaker);
-
-	//  player.play(song, octave);
 	player.play_P(song_P, octave);
 }
 
