@@ -14,24 +14,24 @@ import paver.virtual
 sys.path.insert(0, path('.').abspath())
 import simulator
 
-#logging.basicConfig(level=logging.DEBUG)
+# logging.basicConfig(level=logging.DEBUG)
 
 
 options(
     sphinx=Bunch(
         docroot='docs',
         builddir="_build",
-        ),
+    ),
     pdf=Bunch(
         builddir='_build',
         builder='latex',
     ),
-    )
+)
 
 options.paved.clean.rmdirs += ['.tox',
-                                 'dist',
-                                 'build',
-                                 ]
+                               'dist',
+                               'build',
+                               ]
 
 options.paved.clean.patterns += ['*.pickle',
                                  '*.doctree',
@@ -41,7 +41,7 @@ options.paved.clean.patterns += ['*.pickle',
                                  '*.pdf', '*.tex',
                                  '*.png',
 
-                                 'generated_*', # generated files
+                                 'generated_*',  # generated files
 
                                  '*.axf',
                                  '*.elf',
@@ -55,7 +55,7 @@ options.paved.clean.patterns += ['*.pickle',
                                  '*.sym',
                                  '*.vcd',
                                  'sgm7_hwconf.h',
-                                 '*.bak', # cheetah
+                                 '*.bak',  # cheetah
                                  '*.zip',
                                  'distribute_setup.py',
                                  ]
@@ -70,17 +70,17 @@ examples = support.find_examples(root)
 
 @task
 @needs(
-       'cog',
-       'sloccount',
-       'sim',
-       'libsize',
-##       'snippet',
-       'build_test',
-#       'boards',
-       'doxy',
-       'html',
-       'pdf',
-       'nose')
+    'cog',
+    'sloccount',
+    'sim',
+    'libsize',
+    ##       'snippet',
+    'build_test',
+    #       'boards',
+    'doxy',
+    'html',
+    'pdf',
+    'nose')
 def alltest():
     'all tasks to check'
     pass
@@ -108,7 +108,7 @@ def doxy():
 
 
 #@task
-#def snippet():
+# def snippet():
 #    '''generate screenshots from code snippets'''
 #    f = docroot / 'code_examples.csv'
 #    sim.snippet_doc(f, docroot, logger=info)
@@ -120,32 +120,32 @@ def libsize():
     simulator.libsize(f, docroot, logger=info)
 
 
-
 ARDUINO_VERSIONS = [
-                  '0022',
-#                  '0023',
-                  '1.0',
-                  ]
+    '0022',
+    #                  '0023',
+    '1.0',
+]
 
 
 @task
 def build_test():
     old_home = os.environ['ARDUINO_HOME']
     for ver in ARDUINO_VERSIONS:
-        os.environ['ARDUINO_HOME'] = path('~/opt/arduino-{0}'.format(ver)).expanduser()
+        os.environ['ARDUINO_HOME'] = path(
+            '~/opt/arduino-{0}'.format(ver)).expanduser()
         csv = docroot / 'generated_build_test_{0}.csv'.format(ver)
         support.build2csv(
-                          examples,
-                          csv,
-                          logdir=docroot / '_build' / 'html',
-                          logger=info,
-#                          extra_lib='rtttl',
-                          )
+            examples,
+            csv,
+            logdir=docroot / '_build' / 'html',
+            logger=info,
+            #                          extra_lib='rtttl',
+        )
     os.environ['ARDUINO_HOME'] = old_home
 
 
 #@task
-#def boards():
+# def boards():
 #    for ver in ARDUINO_VERSIONS:
 #        support.set_arduino_path('~/opt/arduino-{0}'.format(ver))
 #        csv = docroot / 'generated_boards_{0}.csv'.format(ver)
@@ -155,8 +155,7 @@ def build_test():
 @task
 def sim():
     simulator.generate_vcd(
-                        song='Indiana:d=4,o=5,b=4000:e,8p,8f,8g,8p,1c6',
-                        vcd='docs/generated_indy.vcd',
-                        logger=info,
-                        )
-
+        song='Indiana:d=4,o=5,b=4000:e,8p,8f,8g,8p,1c6',
+        vcd='docs/generated_indy.vcd',
+        logger=info,
+    )

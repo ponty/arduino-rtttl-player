@@ -9,8 +9,8 @@ root = path(__file__).parent.parent
 examples = support.find_examples(root)
 
 fails = [
-        ('ExtTone.pde', 'atmega48'),
-       ]
+    ('ExtTone.pde', 'atmega48'),
+]
 
 
 def test_examples_count():
@@ -18,7 +18,7 @@ def test_examples_count():
     ok_(len(examples))
 
 
-#def check_build(ex, hwpack, board):
+# def check_build(ex, hwpack, board):
 #    cc = Arduino(hwpack=hwpack, board=board)
 ##    cc.extra_lib = root
 #    print cc.hwpack, cc.board, ex
@@ -32,7 +32,7 @@ def check_build(ex, mcu):
     cc.build(ex)
     assert cc.size().ok
 
-#def generate(func, params, labels=None):
+# def generate(func, params, labels=None):
 #    if not labels:
 #        labels = params
 #    if not hasattr(func, '_index'):
@@ -44,6 +44,7 @@ def check_build(ex, mcu):
 #    logging.debug('cmd:' + cmd)
 #    return cmd
 
+
 def generate(func, params, labels=None):
     if not labels:
         labels = params
@@ -51,8 +52,8 @@ def generate(func, params, labels=None):
         func._index = 0
     func._index += 1
     cmd = '''def test_{func._index:02}_{labels}(): {func.__name__}({params})'''.format(func=func,
-                       params=','.join(['"%s"' % x for x in params]),
-                       labels='_'.join(labels))
+                                                                                       params=','.join(['"%s"' % x for x in params]),
+                                                                                       labels='_'.join(labels))
     logging.debug('cmd:' + cmd)
     return cmd
 
@@ -60,8 +61,8 @@ for ex in examples:
     for cc in simple_targets():
         if (str(path(ex).name), cc.mcu) not in fails:
             exec generate(check_build,
-                      [ex, cc.mcu],
-                      [ex.namebase, cc.mcu])
+                          [ex, cc.mcu],
+                          [ex.namebase, cc.mcu])
 
 # for ex in examples:
 #    for cc in arduino.targets():
@@ -70,4 +71,3 @@ for ex in examples:
 #                exec generate(check_build,
 #                              [ex, cc.hwpack, cc.board],
 #                              [ex.namebase, cc.hwpack, cc.board])
-
