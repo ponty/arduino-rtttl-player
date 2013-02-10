@@ -31,7 +31,7 @@ Basic usage
 	
 	const int pinSpeaker = 13;
 	const int octave = 0;
-	const char song_P[] PROGMEM = 'Indiana:d=4,o=5,b=4000:e,8p,8f,8g,8p,1c6';
+	const char song_P[] PROGMEM = "Indiana:d=4,o=5,b=4000:e,8p,8f,8g,8p,1c6";
 	
 	Rtttl player;
 	
