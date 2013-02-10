@@ -63,7 +63,8 @@
 </dd>
 <dt>Features:</dt>
 <dd><ul class="first last simple">
-<li>based on RTTTL example in <a class="reference external" href="http://code.google.com/p/rogue-code/wiki/ToneLibraryDocumentation">Tone</a> library</li>
+<li>based on RTTTL <a class="reference external" href="http://code.google.com/p/arduino-tone/source/browse/trunk/examples/RTTTL/RTTTL.pde">example</a> in <a class="reference external" href="http://code.google.com/p/rogue-code/wiki/ToneLibraryDocumentation">Tone</a> library</li>
+<li>hardware: check <a class="reference external" href="http://code.google.com/p/rogue-code/wiki/ToneLibraryDocumentation">Tone</a> library</li>
 <li>blocking mode only</li>
 <li>song can be either in PROGMEM or RAM</li>
 <li>support for both internal and external improved <a class="reference external" href="http://code.google.com/p/rogue-code/wiki/ToneLibraryDocumentation">Tone</a> library</li>
@@ -80,27 +81,28 @@
 </div>
 <div class="section" id="basic-usage">
 <h1>Basic usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-c"><pre>//#include &lt;Tone.h&gt;
-// if Tone.h is included before this include,
-// then the external Tone library is used
-// else the core tone()/noTone() functions.
-#include &lt;rtttl.h&gt;
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">//#include &lt;Tone.h&gt;</span>
+<span class="cp">// if Tone.h is included before this include,</span>
+<span class="cp">// then the external Tone library is used</span>
+<span class="cp">// else the core tone()/noTone() functions.</span>
+<span class="cp">#include &lt;rtttl.h&gt;</span>
 
-const int pinSpeaker = 13;
-const int octave = 0;
-const char song_P[] PROGMEM = 'Indiana:d=4,o=5,b=4000:e,8p,8f,8g,8p,1c6';
+<span class="k">const</span> <span class="kt">int</span> <span class="n">pinSpeaker</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">octave</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">char</span> <span class="n">song_P</span><span class="p">[]</span> <span class="n">PROGMEM</span> <span class="o">=</span> <span class="s">&quot;Indiana:d=4,o=5,b=4000:e,8p,8f,8g,8p,1c6&quot;</span><span class="p">;</span>
 
-Rtttl player;
+<span class="n">Rtttl</span> <span class="n">player</span><span class="p">;</span>
 
-void setup(void)
-{
-        player.begin(pinSpeaker);
-        player.play_P(song_P, octave);
-}
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="n">player</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">pinSpeaker</span><span class="p">);</span>
+        <span class="n">player</span><span class="p">.</span><span class="n">play_P</span><span class="p">(</span><span class="n">song_P</span><span class="p">,</span> <span class="n">octave</span><span class="p">);</span>
+<span class="p">}</span>
 
-void loop(void)
-{
-}</pre>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 </div>
 <div class="section" id="manual-installation">
