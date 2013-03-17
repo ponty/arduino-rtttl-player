@@ -5,7 +5,6 @@ from paved.pycheck import *
 from paved.util import *
 from paver.easy import *
 from pyavrutils import support
-from sphinxcontrib import paverutils
 import logging
 import os
 import paver.doctools
@@ -22,10 +21,10 @@ options(
         docroot='docs',
         builddir="_build",
     ),
-    pdf=Bunch(
-        builddir='_build',
-        builder='latex',
-    ),
+#    pdf=Bunch(
+#        builddir='_build',
+#        builder='latex',
+#    ),
 )
 
 options.paved.clean.rmdirs += ['.tox',
@@ -87,23 +86,8 @@ def alltest():
 
 
 @task
-@needs('sphinxcontrib.paverutils.html')
-def html():
-    pass
-
-
-@task
-@needs('sphinxcontrib.paverutils.pdf')
-def pdf():
-    fpdf = list(path('docs/_build/latex').walkfiles('*.pdf'))[0]
-    d = path('docs/_build/html')
-    d.makedirs()
-    fpdf.copy(d)
-
-
-@task
 def doxy():
-    path('docs/_build/html/doxy').makedirs()
+    path('docs/_build/html/doxy').makedirs_p()
     sh('doxygen doxy.ini')
 
 
@@ -121,7 +105,7 @@ def libsize():
 
 
 ARDUINO_VERSIONS = [
-    '0022',
+#    '0022',
     #                  '0023',
 #    '1.0',
     '1.0.3',
