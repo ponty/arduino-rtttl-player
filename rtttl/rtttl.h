@@ -20,14 +20,6 @@ inline char read_byte(const char *p, bool pgm)
 		return *p;
 }
 
-inline uint16_t read_word(const uint16_t *p, bool pgm)
-{
-	if (pgm)
-		return pgm_read_word(p);
-	else
-		return *p;
-}
-
 const prog_uint16_t notes[] PROGMEM =
 {	0, //
 	NOTE_C4, //
@@ -313,7 +305,7 @@ public:
 
 			if (note)
 			{
-				_tone(read_word(&notes[(scale - 4) * 12 + note], pgm));
+				_tone(pgm_read_word(&notes[(scale - 4) * 12 + note]));
 				delay(duration);
 				_noTone();
 			}
