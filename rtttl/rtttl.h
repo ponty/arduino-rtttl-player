@@ -20,7 +20,7 @@ inline char read_byte(const char *p, bool pgm)
 		return *p;
 }
 
-const prog_uint16_t notes[] PROGMEM =
+const uint16_t notes[] PROGMEM =
 {	0, //
 	NOTE_C4, //
 	NOTE_CS4, //
@@ -148,7 +148,7 @@ public:
 	}
 #endif
 
-	void play_P(const prog_char *p, uint8_t octave_offset = 0)
+	void play_P(const char *p, uint8_t octave_offset = 0)
 	{
 		_play(p, octave_offset, true);
 	}
@@ -157,7 +157,7 @@ public:
 		_play(p, octave_offset, false);
 	}
 
-	void _play(const prog_char *p, uint8_t octave_offset, bool pgm)
+	void _play(const char *p, uint8_t octave_offset, bool pgm)
 	{
 		// Absolutely no error checking in here
 
@@ -316,4 +316,3 @@ public:
 		}
 	}
 };
-
